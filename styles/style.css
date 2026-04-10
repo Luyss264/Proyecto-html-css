@@ -5,34 +5,32 @@
 }
 
 body{
-    background-color: #0f172a;
+    background-color: #eccebd;
     min-width: 300px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .encabezado {
     display: flex;
-    height: auto;
+    flex-direction: row;
+    height: 50%;
     justify-content: space-between;
-    margin: 10px;
     align-items: center;
-    border: 4px dashed #f8fafc;
-    border-radius: 15px;
+    border-bottom: 4px dashed black;
+    padding: 30px;
 }
 
 .title-index {
-    color: #f8fafc;
+    color: black;
     font-weight:500;
     font-size: 1.8rem;
     flex: 1;
-    margin: 40px;
 }
 
 .nav_ul {
-    width: 10%;
+    width: 20%;
     flex: 2;
-    margin:40px;
-    min-width: 258px;
+    min-width: 320px;
     max-width: 515px;
 }
 
@@ -48,17 +46,71 @@ body{
 }
 
 .list_item_nav a {
-    color: #f8fafc;
+    color: black;
     font-weight: 500;
     font-size: smaller;
     text-decoration: none;
-    border: solid;
+    border: solid 3px;
     border-radius: 50px;
     padding:5px;
 }
 
 .main_container {
+    width: 100%;
+    height: auto;
     padding: 3px;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+
 }
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    border: 4px dashed black;
+    border-radius: 15px;
+    gap: 20px;
+
+}
+
+#home_container{
+    width: 100%;
+    border: none;
+    height: auto;
+}
+
+#description_container p{
+    width: 65%;
+    height: auto;
+}
+
+#projects_container ul{
+    list-style-type: none;
+    text-align: start;
+
+}
+
+.list-item a{
+    text-decoration: none;
+    color:darkslategray
+}
+
+
+
+
+
+
+
+
+
+
 
