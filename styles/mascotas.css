@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 15%;
+    height: 20%;
     justify-content: space-between;
     align-items: center;
     border-bottom: 4px dashed black;
@@ -37,8 +37,8 @@ body {
 .link-home {
     display: inline-block;
     color: black;
-    width: 100px;
-    height: 35px;
+    width: 85px;
+    height: 32px;
     text-align: center;
     text-decoration: none;
     font-weight: 500;
@@ -50,13 +50,15 @@ body {
 
 .link-home:hover {
     background-color: rgb(200, 103, 13);
-    width: 120px;
+    align-content: center;
+    width: 100px;
+    height: 40px;
     border-color: transparent;
 }
 
 /* Contenedor principal */
 .contenedor-mascotas {
-    margin-top: 150px; /* Espacio para el header fixed */
+    margin-top: 200px; /* Espacio para el header fixed */
     padding: 40px 20px;
     display: flex;
     justify-content: center;
@@ -84,7 +86,7 @@ body {
 }
 
 .contenedor-imagen-mascota:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+
     transform: translateY(-10px); /* Pequeño salto hacia arriba */
     border-color: rgb(200, 103, 13);
 }

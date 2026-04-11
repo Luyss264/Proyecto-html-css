@@ -8,6 +8,7 @@ body{
     background-color: #eccebd;
     min-width: 300px;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 .encabezado {
@@ -23,6 +24,7 @@ body{
     top: 0px;
     left: 0px;
     background-color: #eccebd;
+    z-index: 2;
 }
 
 .title-index {
@@ -66,8 +68,6 @@ body{
 }
 
 .list_item_nav a:hover{
-    display:inline-block;
-    text-align: center;
     align-content: center;
     width: 100px;
     height: 40px;
@@ -83,7 +83,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 90px;
 
 }
 
@@ -104,18 +104,73 @@ section {
 }
 
 #home_container{
-    margin-top: 60px;
     width: 100%;
     height: auto;
     border: none;
 
 }
 
+@keyframes crucero {
+  0% {
+    /* Empieza fuera de la pantalla a la izquierda */
+    transform: translateX(-100%);
+  }
+  100% {
+    /* Termina fuera de la pantalla a la derecha */
+    transform: translateX(100%);
+  }
+}
+
+@keyframes contracrucero {
+    0% {
+    /* Empieza fuera de la pantalla a la izquierda */
+    transform: translateX(100%);
+  }
+  100% {
+    /* Termina fuera de la pantalla a la derecha */
+    transform: translateX(-100%);
+  }
+}
+
+.arrows{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 100%;
+    pointer-events: none;
+}
+
+.arrows1 {
+    top: 200px;
+}
+
+.arrows2{
+    top:500px;
+}
+
+.rightway{
+    animation: crucero 5s linear infinite;
+}
+
+.rightway1{
+
+    animation-delay: 3s;
+}
+.rightway2{
+    animation-delay: 2s;
+}
+.leftway{
+    animation: contracrucero 3s linear infinite;
+}
+
+
 #home_container h1{
     text-transform: capitalize;
     font-size:2.2rem;
     margin: 200px 0;
-    width: 40%;
+    width: auto;
     transition:all ease-out 0.5s;
 }
 
@@ -145,6 +200,15 @@ section {
 #contact_container:hover{
     width: 55%;
     height: 350px;
+    border-color:  rgb(200, 103, 13);
+
+}
+
+#description_container:hover h2,
+#projects_container:hover h2,
+#contact_container:hover h2{
+    color:  rgb(200, 103, 13);
+    
 
 }
 
@@ -156,12 +220,19 @@ section {
 #projects_container ul{
     list-style-type: none;
     text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
 }
 
 .list-item a{
     text-decoration: none;
     color:darkslategray
+}
+
+.list-item a:hover{
+    color: darkgoldenrod;
 }
 
 
