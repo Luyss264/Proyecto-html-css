@@ -1,0 +1,150 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hover-color: rgb(200, 103, 13);
+}
+
+body {
+    background-color: #eccebd;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+/* Fixed Header */
+.header-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 17%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px dashed black;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #eccebd;
+    z-index: 1000;
+}
+
+.pets-title {
+    color: black;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.nav-panel ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    list-style: none;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    color: black;
+    width: 85px;  
+    height: 32px; 
+    text-align: center;
+    font-weight: 500;
+    font-size: smaller;
+    text-decoration: none;
+    border: solid 3px;
+    border-radius: 50px;
+    padding: 5px;
+    z-index: 4;
+    position: relative;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#names-button {
+    width: auto;
+    background-color: transparent;
+    padding: 5px;
+    font-weight: 700;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: var(--hover-color);
+    z-index: -1; 
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    align-content: center;
+    width: 100px;
+    height: 40px;
+    border-color: transparent;
+}
+
+.btn:hover::before {
+    left: 0;
+}
+
+/* Main Layout */
+.pets-main-content {
+    margin-top: 200px;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive Grid */
+.pets-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Pet Cards */
+.pet-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: 3px dashed black;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all ease-out 0.3s;
+}
+
+.pet-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--hover-color);
+}
+
+/* Image styles */
+.pet-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Caption */
+.pet-description {
+    font-weight: 800;
+    color: black;
+    line-height: 1.4;
+    font-size: 0.9rem;
+    text-align: center;
+}
